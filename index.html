@@ -6,20 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Bootstrap</title>
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <style>
+        img{
+            width: auto;
+            height: 250px;
+        }
+    </style>
 </head>
 
 <body>
     <!--container est utilisé pour le main, margin est de 0 à 5 ave m , mt mb me et ms, padding c'est p, border-radius c'est rounded-->
+    <!--getboostrap.com-->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark"> <!--navbar-light pour colorer les text en noir-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!--emplacement : me par défaut, mx et ms-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <button class="btn btn-primary">
-            Bouton 1
-        </button>
-        <div class="border border-2 border-primary p-3 mt-2 bg-success text-white rounded-5">
+        <div class="border border-2 border-primary p-3 mt-4 bg-success text-white rounded-5 fs-3 fw-bold">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum iure officiis. Voluptatem unde
                 porro dignissimos alias, ullam odio vel vero autem, eaque accusamus provident veniam repudiandae tempora
                 consequatur commodi!</p>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-4 gap-2">
             <div class="col-12 col-sm-4 col-md bg-primary">column1</div>
             <div class="col-12 col-sm-4 col-md bg-danger">column2</div>
             <div class="col-12 col-sm-4 col-md bg-success">column3</div>
@@ -29,9 +77,99 @@
             <div class="col-12 col-sm-4 col-md bg-success">column7</div>
 
         </div>
+        <div class="mt-4">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-warning">warning</button>
+            <button type="button" class="btn btn-danger">Primary</button>
+            <button type="button" class="btn btn-success">Primary</button>
+            <a href="#" class="btn btn-success">Login</a>
+        </div>
+        <!--taille : sm; md et lg  md par défaut-->
+        <div class="row mt-4 gap-2">
+            <button type="button" class="col btn btn-outline-primary">Primary</button>
+            <button type="button" class="col btn btn-outline-secondary">Primary</button>
+            <button type="button" class="col btn btn-outline-warning">Primary</button>
+            <button type="button" class="col btn btn-outline-danger">Primary</button>
+            <button type="button" class="col btn btn-outline-success">Primary</button>
+            <a href="#" class="btn btn-outline-success">Login</a>
+        </div>
+        <table class="table table-bordered table-striped table-hover mt-5">
+            <thead class="table-success text-center fs-5">
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Adresse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-danger">RAKOTO</td>
+                    <td>Zafy</td>
+                    <td>67 Ha</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>JEAN</td>
+                    <td>Marc</td>
+                    <td>Ivato</td>
+                </tr>
+                <tr>
+                    <td>MARIE</td>
+                    <td>Rose</td>
+                    <td>Anosibe</td>
+                </tr>
+                <tr>
+                    <td>MARIE</td>
+                    <td>Rose</td>
+                    <td>Anosibe</td>
+                </tr>
+                <tr>
+                    <td>MARIE</td>
+                    <td>Rose</td>
+                    <td>Anosibe</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title bg-warning">Titre</h5>
+                        <h6 class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at nostrum
+                            commodi voluptatibus omnis deleniti?</h6>
+                        <button class="btn btn-success">Details</button>
 
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="carouselExample" class="carousel slide mt-4">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="public/images/im1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="public/images/im2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="public/images/im3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     </div>
 
+    </div>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
